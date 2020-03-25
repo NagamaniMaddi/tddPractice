@@ -10,4 +10,13 @@ public class CreateAccount {
 		return "User Creation Failed";
 	}
 
+	public boolean isUserNameValid(String userName) {
+		if(userName.matches("^[a-zA-Z]*$")){
+		return true;
+		}
+		return false;
+	}
+
+	
+
 }

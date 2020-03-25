@@ -2,9 +2,9 @@ package com.agile.tddPractice;
  
  
  import static org.junit.Assert.assertEquals; 
- //import static org.junit.Assert.assertFalse; 
+ import static org.junit.Assert.assertFalse; 
  //import static org.junit.Assert.assertNotNull; 
- //import static org.junit.Assert.assertTrue; 
+ import static org.junit.Assert.assertTrue; 
  
  
  //import org.junit.Assert; 
@@ -32,4 +32,25 @@ package com.agile.tddPractice;
         //Assert
         assertEquals("User Creation Failed",result);
     }
+    @Test
+    public void shouldGetTrueWhenUsernameHasOnlyAlphabets(){
+        //Arrange
+        CreateAccount crateAccount = new CreateAccount();
+        //Act
+        boolean result = crateAccount.isUserNameValid("abcde");
+        //Assert
+        assertTrue(result);
+    }
+    @Test
+    public void shouldGetFalseWhenUsernameHasOtherthanAlphabets(){
+        //Arrange
+        CreateAccount crateAccount = new CreateAccount();
+        //Act
+        boolean result = crateAccount.isUserNameValid("abcde123");
+        //Assert
+        assertFalse(result);
+    }
+
+
+
  }
