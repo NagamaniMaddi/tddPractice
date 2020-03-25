@@ -11,7 +11,8 @@ public class CreateAccount {
 	}
 
 	public boolean isUserNameValid(String userName) {
-		if(userName.matches("^[a-zA-Z]*$")){
+		if((!userName.equals("")) 
+		&& (userName != null) && (userName.matches("^[a-zA-Z]*$"))){
 		return true;
 		}
 		return false;

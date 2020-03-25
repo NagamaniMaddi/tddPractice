@@ -32,6 +32,29 @@ package com.agile.tddPractice;
         //Assert
         assertEquals("User Creation Failed",result);
     }
+
+     
+    @Test
+    public void shouldGetFalseWhenUserNameIsNull(){
+        //Arrange
+        CreateAccount crateAccount = new CreateAccount();
+        //Act
+        boolean result = crateAccount.isUserNameValid("");
+        //Assert
+        assertFalse(result);
+    }
+
+    @Test
+    public void shouldGetFalseWhenUserNameIsEmpty(){
+        //Arrange
+        CreateAccount crateAccount = new CreateAccount();
+        //Act
+        boolean result = crateAccount.isUserNameValid("");
+        //Assert
+        assertFalse(result);
+    }
+
+
     @Test
     public void shouldGetTrueWhenUsernameHasOnlyAlphabets(){
         //Arrange
