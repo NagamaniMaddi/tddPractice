@@ -20,6 +20,16 @@ package com.agile.tddPractice;
         //Act
         String result = crateAccount.getSuccessMessage();
         //Assert
-        assertEquals("Usr Created Successfully",result);
+        assertEquals("User Created Successfully",result);
+    }
+
+    @Test
+    public void shouldGetAFailureMessageOnUserAccountCreationFailure(){
+        //Arrange
+        CreateAccount crateAccount = new CreateAccount();
+        //Act
+        String result = crateAccount.getFailureMessage();
+        //Assert
+        assertEquals("User Creation Failed",result);
     }
  }

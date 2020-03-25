@@ -3,7 +3,11 @@ package com.agile.tddPractice;
 public class CreateAccount {
 
 	public String getSuccessMessage() {
-		return "Usr Created Successfully";
+		return "User Created Successfully";
+    }
+    
+    public String getFailureMessage() {
+		return "User Creation Failed";
 	}
 
 }
