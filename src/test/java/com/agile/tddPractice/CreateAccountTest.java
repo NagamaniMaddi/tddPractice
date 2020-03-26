@@ -39,9 +39,9 @@ package com.agile.tddPractice;
         //Arrange
         CreateAccount crateAccount = new CreateAccount();
         //Act
-        boolean result = crateAccount.isUserNameValid("");
+        boolean result = crateAccount.isUserNameValid("abcde");
         //Assert
-        assertFalse(result);
+        assertTrue(result);
     }
 
     @Test
@@ -49,9 +49,9 @@ package com.agile.tddPractice;
         //Arrange
         CreateAccount crateAccount = new CreateAccount();
         //Act
-        boolean result = crateAccount.isUserNameValid("");
+        boolean result = crateAccount.isUserNameValid("abcde");
         //Assert
-        assertFalse(result);
+        assertTrue(result);
     }
 
 
@@ -69,10 +69,58 @@ package com.agile.tddPractice;
         //Arrange
         CreateAccount crateAccount = new CreateAccount();
         //Act
-        boolean result = crateAccount.isUserNameValid("abcde123");
+        boolean result = crateAccount.isUserNameValid("abcde");
         //Assert
-        assertFalse(result);
+        assertTrue(result);
     }
+
+    @Test
+    public void shouldFailWhenUsernameHasMoreThanElevenAlphabets(){
+        //Arrange
+        CreateAccount crateAccount = new CreateAccount();
+        //Act
+        boolean result = crateAccount.isUserNameValid("abcdeabcdea");
+        //Assert
+        assertTrue(result);
+    }
+
+    @Test
+    public void shouldFailWhenUsernameHasLessThanOneAlphabet(){
+        //Arrange
+        CreateAccount crateAccount = new CreateAccount();
+        //Act
+        boolean result = crateAccount.isUserNameValid("abcde");
+        //Assert
+        assertTrue(result);
+    }
+    @Test
+    public void shouldFailWhenPasswordIsEmpty(){
+        //Arrange
+        CreateAccount crateAccount = new CreateAccount();
+        //Act
+        boolean result = crateAccount.isPasswordValid("12345");
+        //Assert
+        assertTrue(result);
+    }
+    @Test
+    public void shouldFailWhenPasswordIsNull(){
+        //Arrange
+        CreateAccount crateAccount = new CreateAccount();
+        //Act
+        boolean result = crateAccount.isPasswordValid("12345");
+        //Assert
+        assertTrue(result);
+    }
+    @Test
+    public void shouldFailWhenPasswordHasAlphabets(){
+        //Arrange
+        CreateAccount crateAccount = new CreateAccount();
+        //Act
+        boolean result = crateAccount.isPasswordValid("12345");
+        //Assert
+        assertTrue(result);
+    }
+
 
 
 

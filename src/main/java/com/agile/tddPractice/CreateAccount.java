@@ -12,10 +12,17 @@ public class CreateAccount {
 
 	public boolean isUserNameValid(String userName) {
 		if((!userName.equals("")) 
-		&& (userName != null) && (userName.matches("^[a-zA-Z]*$"))){
+		&& (userName != null) && (userName.matches("^[a-zA-Z]*$")) && (userName.length()<=11) && (userName.length()>=1)){
 		return true;
 		}
 		return false;
+	}
+
+	public boolean isPasswordValid(String password) {
+		if(password == null || password.isEmpty() || (!password.matches("[0-9]+")))
+			return false;
+		else
+			return true;
 	}
 
 	
