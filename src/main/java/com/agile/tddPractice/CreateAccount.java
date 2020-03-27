@@ -11,11 +11,11 @@ public class CreateAccount {
 	}
 
 	public boolean isUserNameValid(String userName) {
-		if((!userName.equals("")) 
-		&& (userName != null) && (userName.matches("^[a-zA-Z]*$")) && (userName.length()<=11) && (userName.length()>=1)){
-		return true;
+		if((userName != null) && (!userName.equals("")) && (userName.matches("^[a-zA-Z]*$")) 
+		&& (userName.length()<=11) && (userName.length()>=1)){
+			return true;
 		}
-		return false;
+			return false;
 	}
 
 	public boolean isPasswordValid(String password) {
