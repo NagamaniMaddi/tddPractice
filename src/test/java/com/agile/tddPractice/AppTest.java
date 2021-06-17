@@ -35,6 +35,21 @@ public void userNameContainOtherthanLettersOnly(){
     boolean result = a.userNameValid("123John");
     assertFalse(result);
 }
+
+@Test
+
+public boolean Test1(){
+
+    boolean  sd = true;
+    if(sd){
+        //
+        //
+        //
+        return true;
+    }
+    return false;
+
+}
  
     
 }

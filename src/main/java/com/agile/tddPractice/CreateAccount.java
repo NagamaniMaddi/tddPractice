@@ -1,6 +1,10 @@
 package com.agile.tddPractice;
 
+import java.util.HashMap; 
+
 public class CreateAccount {
+
+	HashMap<String, String> UserData = new HashMap<String, String>(); 
 
 	public String getSuccessMessage() {
 		return "User Created Successfully";
